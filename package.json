@@ -1,0 +1,27 @@
+{
+  "name": "yandex-photos",
+  "version": "0.0.0",
+  "description": "API wrapper for Yandex Photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/floatdrop/yandex-photos.git"
+  },
+  "keywords": [
+    "Yandex",
+    "Photos",
+    "API"
+  ],
+  "author": "Vsevolod Strukchinsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/yandex-photos/issues"
+  },
+  "homepage": "https://github.com/floatdrop/yandex-photos",
+  "devDependencies": {
+    "mocha": "^1.21.4"
+  }
+}
