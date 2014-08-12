@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "form-data": "^0.1.4",
-    "sent": "^0.1.0"
+    "sent": "^0.2.0"
   }
 }
