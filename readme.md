@@ -19,13 +19,25 @@ photos.upload(fs.createReadStream('picture.jpg'), {
 
 ## API
 
-### client(oauth)
+### client(user, oauth, [options])
 
 Creates client to Yandex Photos API.
+
+##### user
+Type: `String`  
+Contains user name of oauth token.
 
 ##### oauth
 Type: `String`  
 Contains oauth token from OAuth authorization procedure.
+
+##### options
+
+###### api
+Type: `String`  
+Default: `http://api-fotki.yandex.ru/api`
+
+Address of Yandex Photos API.
 
 ### client.upload(file, [options], cb)
 Uploads photo to Yandex Photos.

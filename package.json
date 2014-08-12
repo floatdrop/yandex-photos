@@ -23,5 +23,9 @@
   "homepage": "https://github.com/floatdrop/yandex-photos",
   "devDependencies": {
     "mocha": "^1.21.4"
+  },
+  "dependencies": {
+    "form-data": "^0.1.4",
+    "sent": "^0.1.0"
   }
 }
