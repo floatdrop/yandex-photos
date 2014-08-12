@@ -17,17 +17,18 @@ Client.prototype.upload = function (file, options, cb) {
         options = {};
     }
 
+    options.headers = options.headers || {};
+    options.headers.Authorization = 'OAuth ' + this._token;
+
     var url = format({
         protocol: this._protocol,
-        host: this._api + '/users/' + this._user + '/photos',
+        host: this._api + '/users/' + this._user + '/photos/',
         query: {
             album: options.album,
             title: options.title,
             summary: options.summary
         }
     });
-
-    console.log(url);
 
     sent(url, file, options, cb);
 };
