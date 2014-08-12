@@ -35,9 +35,13 @@ Contains oauth token from OAuth authorization procedure.
 
 ###### api
 Type: `String`  
-Default: `http://api-fotki.yandex.ru/api`
+Default: `api-fotki.yandex.ru/api`
 
 Address of Yandex Photos API.
+
+###### protocol
+Type: `String`  
+Default: `http`
 
 ### client.upload(file, [options], cb)
 Uploads photo to Yandex Photos.
