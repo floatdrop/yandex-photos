@@ -2,10 +2,13 @@ var sent = require('sent');
 var format = require('url').format;
 
 function Client (user, token, options) {
+    if (!(this instanceof Client)) { return new Client(user, token, options); }
+
     options = options || {};
     this._user = user;
     this._token = token;
-    this._api = options.api || 'http://api-fotki.yandex.ru/api';
+    this._protocol = options.protocol || 'http';
+    this._api = options.api || 'api-fotki.yandex.ru/api';
 }
 
 Client.prototype.upload = function (file, options, cb) {
@@ -15,6 +18,7 @@ Client.prototype.upload = function (file, options, cb) {
     }
 
     var url = format({
+        protocol: this._protocol,
         host: this._api + '/users/' + this._user + '/photos',
         query: {
             album: options.album,
@@ -22,6 +26,8 @@ Client.prototype.upload = function (file, options, cb) {
             summary: options.summary
         }
     });
+
+    console.log(url);
 
     sent(url, file, options, cb);
 };
