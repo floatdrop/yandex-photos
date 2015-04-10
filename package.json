@@ -1,6 +1,6 @@
 {
   "name": "yandex-photos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "API wrapper for Yandex Photos",
   "main": "index.js",
   "scripts": {
