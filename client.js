@@ -1,4 +1,4 @@
-var sent = require('sent');
+var got = require('got');
 var format = require('url').format;
 
 function Client (user, token, options) {
@@ -30,7 +30,7 @@ Client.prototype.upload = function (file, options, cb) {
         }
     });
 
-    sent(url, file, options, cb);
+    got(url, file, options, cb);
 };
 
 module.exports = Client;
